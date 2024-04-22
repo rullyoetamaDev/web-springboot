@@ -12,7 +12,7 @@ import com.arlspringboot.entity.ProductEntity;
 import com.arlspringboot.service.ProductService;
 
 @Controller
-@RequestMapping("")
+@RequestMapping("") //Seacara default dengan url localhost://8080 bisa mengakses controller ini
 public class HomeController {
 
     @Autowired
@@ -20,7 +20,7 @@ public class HomeController {
 
     // GetMapping => ini Annotation untuk mapping controllernya siapa, disini controllernya index.html
     @GetMapping
-    // ini sebuah function dimana akan mereturn index.html
+    // karena difunction ini akan mereturn sebuah halaman index.html jadi cukup menggunakan String dan return nama file html (index)
     public String welcome(Model model) {
         // doing something
         String messages = "ARL Web Spring";
